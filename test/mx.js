@@ -74,3 +74,14 @@ test('mx term with invalid domain fails', t => {
 		}
 	]);
 });
+
+// used to match the mx mechanism due to a bug
+test('not a mx term ending with mx', t => {
+	t.deepEqual(s.parseTerm('include:domain.mx', []), {
+		prefix: '+',
+		prefixdesc: prefixes['+'],
+		type: 'include',
+		value: 'domain.mx',
+		description: mechanisms.include.description
+	});
+});

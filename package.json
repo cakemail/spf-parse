@@ -1,6 +1,6 @@
 {
   "name": "spf-parse",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Parse SPF (Sender Polify Framework) records",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/softvu/spf-parse.git"
+    "url": "https://github.com/cakemail/spf-parse.git"
   },
   "keywords": [
     "spf",
@@ -27,9 +27,9 @@
   "author": "Brian Hann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/softvu/spf-parse/issues"
+    "url": "https://github.com/cakemail/spf-parse/issues"
   },
-  "homepage": "https://github.com/softvu/spf-parse#readme",
+  "homepage": "https://github.com/cakemail/spf-parse#readme",
   "devDependencies": {
     "ava": "^0.17.0",
     "coveralls": "^2.11.15",
@@ -61,5 +61,8 @@
     "ipaddr.js": "^1.2.0",
     "lodash": "^4.17.3",
     "tldjs": "^1.7.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.ovh.cakemail.io"
   }
 }

@@ -145,7 +145,7 @@ module.exports = {
 		// a:<domain>
 		// a:<domain>/<prefix-length>
 		description: 'Match if IP has a DNS \'A\' record in given domain',
-		pattern: /a((:.*?)?(\/\d*)?)?$/i,
+		pattern: /^a((:.*?)?(\/\d*)?)?$/i,
 		validate(r) {
 			return domainPrefixCheck('a', this.pattern, r);
 		}
@@ -156,7 +156,7 @@ module.exports = {
 		// mx:<domain>
 		// mx:<domain>/<prefix-length>
 		description: '',
-		pattern: /mx((:.*?)?(\/\d*)?)?$/i,
+		pattern: /^mx((:.*?)?(\/\d*)?)?$/i,
 		validate(r) {
 			return domainPrefixCheck('mx', this.pattern, r);
 		}

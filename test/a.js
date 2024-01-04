@@ -74,3 +74,14 @@ test('a term with invalid domain fails', t => {
 		}
 	]);
 });
+
+// this used to match the a mechanism due to a bug
+test('not an a term ending with a', t => {
+	t.deepEqual(s.parseTerm('include:domain.ca', []), {
+		prefix: '+',
+		prefixdesc: prefixes['+'],
+		type: 'include',
+		value: 'domain.ca',
+		description: mechanisms.include.description
+	});
+});
